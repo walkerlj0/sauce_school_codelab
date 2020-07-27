@@ -6,7 +6,7 @@ This document will be for documenting sauce_school specific changes and specific
 #Initial setup
 1. Install Go and nodeJS on your computer, as per [instructions here](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd)
 
-2. Download the [claat binary](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd). When you insitalled GO on your computer, you should have a folder called go/bin and inside that file will be claat.
+2. Download the [claat binary](https://github.com/googlecodelabs/tools/tree/master/claat#install). When you insitalled GO on your computer, you should have a folder called go/bin and inside that file will be claat.
 
 3. in your ~/.bash_profile add in
 '
@@ -15,7 +15,7 @@ This document will be for documenting sauce_school specific changes and specific
 export PATH=$PATH:$HOME/go/bin
 ```
 
-4. The project setup is labeled sauce_school_codelab. Within it you should see the folders tools/site. Inside of /site, you have a separate 'codelab' for each course (this is because each course will have it's own 'codelabs' landing page with several modules? subject to change)
+4. The project setup is labeled sauce_school_codelab. Within it you should see the folders tools/site. Inside of /site, you have a separate 'codelab' for each course (this is because each course will have it's own 'codelabs' landing page with several modules. ??subject to change per design decision)
 
 5. To run a local copy, make sure that you have a markdown file. **!IMPORTANT at the top of the .md file , you need to have project information with the id- this is what your file generated for the codelab will be named. set it to the same name as your project directory (see below)of your codelab** (see below). Each codelab means a new landing page- each codelab is a course, with several lessons in it. Some examples name of 'codelab' directories include 'site/SeleniumJS' and site/Selenium Java'. Now run the command `claat export <filename.md>` to export it to a new directory with a .json file and index.html.
 
