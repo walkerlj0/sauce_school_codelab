@@ -6,7 +6,7 @@ This document will be for documenting sauce_school specific changes and specific
 #Initial setup
 1. Install Go and nodeJS on your computer, as per [instructions here](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd)
 
-2. Download the [claat binary](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd). When you insitalled GO on your computer, you should have a golder called go/bin and inside that file will be claat.
+2. Download the [claat binary](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd). When you insitalled GO on your computer, you should have a folder called go/bin and inside that file will be claat.
 
 3. in your ~/.bash_profile add in
 '
