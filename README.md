@@ -1,4 +1,4 @@
-This project is created for Sauce Labs using the open source tool created by google in to folder inside
+This project is created for Sauce Labs using the open source tool created by Google, located in the 'tools' folder inside.
 Navigate to tools/README.md to learn more about this tool, how to use it, and get resources
 
 This document will be for documenting sauce_school specific changes and specifications.
