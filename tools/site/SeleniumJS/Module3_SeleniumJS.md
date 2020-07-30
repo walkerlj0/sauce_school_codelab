@@ -1,6 +1,6 @@
 author:Lindsay
 summary: Module X of the course X. Learn to write Selenium tests in X programming language with X Test runner and X framework
-id: Modiule3_SeleniumJS
+id: Module3_SeleniumJS
 categories:Intermediate, Expert, Selenium, JavaScript, Mocha
 environments: Web
 status: Published
