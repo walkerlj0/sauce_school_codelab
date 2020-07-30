@@ -61,3 +61,31 @@ Feedback Link: https://someformORemailforcoursefeedback
     Format for Links `[Text to be highlighted](URL)`
     Format for <iframes> `[embed URL](regular URl link)`
     - Get the embed URL and take out the following: <iframe src="**https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?embedded=true**" width="640" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+10. Adding Dropdowns– Copy and paste this link in the <head> of any HTML page: <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">.
+
+At the top of each HTML page, create this script:
+After each HTML button/ div, add in a script (each needs a unique script)
+```
+<script>
+function myFunction(id) {
+  var x = document.getElementById(id);
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+```
+
+Use this within your HTML for the dropdown. You can replace -'Final Code' titles, and 'Note' title within the `<button>` (include H3 tags) and the content within the `<div id="Demo1"`>'. The parameter for each `my function(XXX)` and the `div id=XXX` each need to be unique. E.g. the next one you create will be 'Demo2'
+
+```
+<button onclick="myFunction('Demo1')" class="w3-button w3-block w3-left-align">
+TITLE</button>
+<div id="Demo1" class="w3-container w3-hide">
+  <p>CONTENT & IMAGES</p>
+</div>
+
+```
