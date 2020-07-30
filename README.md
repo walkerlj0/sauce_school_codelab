@@ -2,6 +2,8 @@ This project is created for Sauce Labs using the open source tool created by goo
 Navigate to tools/README.md to learn more about this tool, how to use it, and get resources
 
 This document will be for documenting sauce_school specific changes and specifications.
+<!-- -->
+
 **Access 'Codelabs' or Course files**
 The course are located in tools/site/CourseName (e.g. tools/site/SeleniumJS). Each course will contain a markdown file for each module (which contains several lessons) which is compiled into a directory containing an index.html redered from the corresponding markdown page.
 
