@@ -1,38 +1,59 @@
-This project is created for Sauce Labs using the open source tool created by Google, located in the 'tools' folder inside.
+This project is created for Sauce Labs using the open source tool created by google in to folder inside
 Navigate to tools/README.md to learn more about this tool, how to use it, and get resources
 
 This document will be for documenting sauce_school specific changes and specifications.
 
-#Initial setup
+**Initial setup**
 1. Install Go and nodeJS on your computer, as per [instructions here](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd)
 
-2. Download the [claat binary](https://github.com/googlecodelabs/tools/tree/master/claat#install). When you insitalled GO on your computer, you should have a folder called go/bin and inside that file will be claat.
+2. Download the [claat binary](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd). When you insitalled GO on your computer, you should have a folder called go/bin and inside that file will be claat.
 
 3. in your ~/.bash_profile add in
-'
+
 ```
 ##Codelabs Path required
 export PATH=$PATH:$HOME/go/bin
 ```
 
-4. The project setup is labeled sauce_school_codelab. Within it you should see the folders tools/site. Inside of /site, you have a separate 'codelab' for each course (this is because each course will have it's own 'codelabs' landing page with several modules. ??subject to change per design decision)
+4. The project setup is labeled sauce_school_codelab. Within it you should see the folders tools/site. Inside of /site, you have a separate 'codelabs' directory for each course (this is because each course will have it's own 'codelabs' landing page with several modules. ?subject to change per design decision)
+Once you have the project cloned, go into the site folder and install all the dependencies:
 
-5. To run a local copy, make sure that you have a markdown file. **!IMPORTANT at the top of the .md file , you need to have project information with the id- this is what your file generated for the codelab will be named. set it to the same name as your project directory (see below)of your codelab** (see below). Each codelab means a new landing page- each codelab is a course, with several lessons in it. Some examples name of 'codelab' directories include 'site/SeleniumJS' and site/Selenium Java'. Now run the command `claat export <filename.md>` to export it to a new directory with a .json file and index.html.
-
-```summary: Module 1 Introduction to Selenium with JavaScript
-id: Module1-SeleniumJS
-categories: First draft
-tags: Beginner
-status: work in progress
-authors: Lindsay Walker
-Feedback Link: https://walkerweb.me
+```
+## navigate to folder
+cd /tools/site
+## install gulp dependencies
+npm install
+npm install -g gulp-cli
 ```
 
-6. To serve it up locally, run `gulp serve --codelabs-dir=<codelab directory name>` e.g. `gulp serve --codelabs-dir=SeleniumJS`
+5. To run a local copy, make sure that you have a markdown file. **!IMPORTANT at the top of the .md file , you need to have project information with the id- this is what your file generated for the codelab will be named. set it to the same name as your project directory (see below)of your codelab** (see below). Each codelab means a new landing page- each codelab is a course, with several lessons in it. Each markdown file is a 'module' with several lessons in it. The 'feedback link' will later be set to a G-Form for people to fill out about bugs/ issues/ questions.
+ Some examples name of 'codelab' directories include 'site/SeleniumJS' and site/Selenium Java'. Enter the directory for the course, where the codelab is stored. Now run the command `claat export <filename.md>` e.g `claat export Module1_SeleniumJS.md` to export it to a new directory with a .json file and index.html.
 
-7. When you create a new codelab markdown file, you can use the [Docs to Markdown tool](https://gsuite.google.com/marketplace/app/docs_to_markdown/700168918607), however there will be some HTML tags at the top you need to delete, as well as title cleanup you need to do
+ *convention, make the .md file use underscores_in_the_name.md and the id (and generated codelabs file) have dashes-in-the-name)*
+
+```
+summary: Module 1 Introduction to Selenium with JavaScript
+id: Module1-SeleniumJS
+categories: First draft
+tags: Beginner/Intermediate/expert, CourseName, WebDriverType, TestRunnerType, FrameworkType
+status: work in progress
+authors: Lindsay Walker
+Feedback Link: https://someformORemailforcoursefeedback
+```
+
+6. To serve it up locally, (`cd ..` to the course directory first) run `gulp serve --codelabs-dir=<codelab directory name>` e.g. `gulp serve --codelabs-dir=SeleniumJS`
+
+7. When you create a new codelab markdown file from a GDoc, you can use the [Docs to Markdown tool](https://gsuite.google.com/marketplace/app/docs_to_markdown/700168918607), however there will be some HTML tags at the top you need to delete, as well as title cleanup you need to do
  - Make sure each title has one hash `#` for the course name. Each sub-category ('lesson') should have two hashes in front `##`)
  - Delete any HTML tags, they will screw things up
  - Make sure you delete any random `<p>` tags within the doc.
  - before each lesson with `##`, above it insert `<!-- ------------------------ -->` to denote a new pages
  - Images can mess things up. Make sure you list an image as  imagefolder/imagename.png. The image folder will be at the same level as the markdown page (not within a codelabs folder')
+
+ 8. Other notes on setup- for images to appear, you need to have an asset folder in the 'codelab' directory where each codelab can pull from (e.g. 'SeleniumJS') Copy and past the folder **universal assets** in tools/site/universal_assets into the codelab folder and rename that folder **assets** folder (ex- you will have SeleniumJS/assets) You will need to add in the assets unique to that folder to the new assets folder.
+
+ 9. Adding in Elements to .md files
+    Format for Images `!(Image title)[imageDirInCodelab/Imagename,extension]``
+    Format for Links `[Text to be highlighted](URL)`
+    Format for <iframes> `[embed URL](regular URl link)`
+    - Get the embed URL and take out the following: <iframe src="**https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?embedded=true**" width="640" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>

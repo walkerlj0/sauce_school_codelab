@@ -35,7 +35,7 @@ This module will focus on topics from _The Selenium Guidebook_ _JavaScript Editi
 
 Selenium is an open source tool used for automating testing of web applications. Without  automated testing, each time a web application was updated, a human would have to go on to the website and try out every possible combination of clicks, interactions, and submissions. If you are able to automate your testing, when an update is made, you simply run your test with the ‘robot’ that is Selenium, which performs programmed sets of interactions for you to test new features and functionality before an updated version of a web app is released into the wild.
 
-![SauceQA Bot](assets/1.02A.png "sauceQAbot")
+ <!--  ![SauceQA Bot](assets/1.02A.png "sauceQAbot") -->
 
 Selenium is a robotic testing tool (not a framework) it expresses no judgement, nor does it help you test. In order to orchestrate the how tests are run, and report on the things that Selenium does, you need a framework, which we will go over later.
 
@@ -55,7 +55,7 @@ There are seven basic elements of a Selenium test script, which apply to any tes
 
 The Selenium Grid allows you to run parallel tests on multiple combinations of machines (e.g., Mac, Windows, or Unix-based systems) using multiple web browsers (versions of Chrome, Edge, Firefox, Safari). These different machines can exist virtually on a server in a cloud environment, or as a network of real devices. JSON is used to communicate test requirements and route it to different nodes which have different environments to test on.
 
-![comp](assets/1.02B.png "comp")
+ <!--  ![comp](assets/1.02B.png "comp") -->
 
 
 The Sauce Labs platform enables you to use a Selenium Grid at scale to run thousands of tests at once, on our suite of different test environments in the cloud. Sauce also has a robust dashboard for easy viewing of test outcomes and increased velocity of debugging tests. This dashboard includes tracking of errors and even a visual record of what occurred in different environments.
@@ -81,13 +81,14 @@ The WebDriver protocol consists of rules for communication between the client on
 The code that Selenium provides to you as a developer (the libraries) is called a Selenium language binding. It ‘binds’ together the JavaScript code you write for actions and tests with things that WebDriver can understand. You also need to use You also need to use webdrivers such as Chromedriver and Geckodriver.
 
 
- ![Selenium Diagram](assets/1.03A.png "SeleniumDiagram")
+ <!--  ![Selenium Diagram](assets/1.03A.png "SeleniumDiagram") -->
 
 Mocha is a JavaScript library/ package that allows you to communicate with Selenium and run unit tests. It also helps orchestrate test execution. This JavaScript language binding (Selenium WebDriver methods written in JavaScript) allows you to leverage the features specified by the W3C WebDriver protocol.
 
 
 ### Quiz
-![https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?embedded=true](https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?usp=sf_link)
+![<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?embedded=true" width="640" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>](https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?usp=sf_link)
+
 
 <!-- blank line
 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?embedded=true" width="640" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
@@ -130,7 +131,7 @@ Frameworks provide both tools and guidelines for creating and designing test sui
 So far, you’ve learned a bit about how the code on your end communicates with the W3C WebDriver using Selenium, however, this isn’t the whole picture. There are other tools that are used in order for you to write test code and implement it. Usually there are runners frameworks used alongside the “vanilla” (plain) programming language that help give structure, create commands, manage & organize files, store data, and more. In this course, we’ll use the Mocha as a test runner and build up our own framework.
 
 
-![Framework Diagram](assets/1.04A.png "Framework Diagram")
+ <!--  ![Framework Diagram](assets/1.04A.png "Framework Diagram") -->
 
 Above is an example of how you might connect a framework with the selenium grid that then executes tests with the Selenium WebDriver. tools you use when you write code, the more these frameworks will make sense.
 
@@ -147,18 +148,28 @@ Download and install the correct version of NodeJS for your machine. NodeJS is a
 
 Now, create a project folder in your user directory. I named mine SeleniumJS.
 
-In Terminal:
 
-![Terminal mkdir](assets/1.05A.png "terminal mkdir")
+    In Terminal:
+
+ <!--  ![Terminal mkdir](assets/1.05A.png "terminal mkdir") -->
 
 
 _** If you already have experience with the NodeJS server, and know how to install npm in a project folder, you can skip the rest of this (on to 1.05). You can also skip to the end to pull the code from the GitHub repository._
 
 Now we are going to install npm. When we run the command npm install, it will download dependencies defined in a package.json file and generate a node_modules folder with the installed modules.
 
-1. Navigate to the folder you just made from the terminal. ![cd Selenium JS](assets/1.05B.png "cd SeleniumJS")
-2. Run npm install from the terminal. ![npm install](assets/1.05C.png "npm install")
-3. If you open your file folder, you should see the folder ‘node_modules’ as well as package.json and package-lock.json.
+
+
+    a. Navigate to the folder you just made from the terminal.
+
+![cd Selenium JS](assets/1.05B.png "cd SeleniumJS")
+
+    b. Run npm install from the terminal.
+
+![npm install](assets/1.05C.png "npm install")
+
+
+    3. If you open your file folder, you should see the folder ‘node_modules’ as well as package.json and package-lock.json.
 
 
 ![directory structure](assets/1.05D.png "directory structure")
@@ -195,7 +206,7 @@ If you would like to configure each driver without npm, use the **[Cheat Sheet](
 
 Let’s take a look at the first test we will set up in the next module:
 
- ![first code](assets/1.05E.png "first code")
+ <!-- ![first code](assets/1.05E.png "first code") -->
 
 
 Different functionality in the code is available because of the different libraries, frameworks, and drivers that are pulled together to set up your test suite. Some commands and functions are part of the ‘vanilla’ JavaScript language, while others are provided as a part of the Mocha dependency we will install. Last but not least, Selenium provides functionality that allows your test code to communicate with different web browsers.
@@ -235,7 +246,7 @@ In many languages, without the await command, the code will try and run through 
 <!-- ------------------------ -->
 
 ## 1.07 Module 1 Quiz
-![https://docs.google.com/forms/d/e/1FAIpQLScxdog5n8yTVeEd-FIbk4aMslA87ZCWB5rogfpwSMlavb_alg/viewform?embedded=true](https://docs.google.com/forms/d/e/1FAIpQLScxdog5n8yTVeEd-FIbk4aMslA87ZCWB5rogfpwSMlavb_alg/viewform?usp=sf_link)
+
 
 
 <!-- blank line
