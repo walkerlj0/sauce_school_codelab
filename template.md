@@ -7,7 +7,7 @@ id: ModiuleX_SeleniumLang
 categories: Beginner/ Intermediate/ Expert, Selenium, JavaScript/Java/Python/Ruby/C#, Test Runner, Framework
 environments: Web
 status: Published
-feedback link: https://forms.gle/bS89x3GhobL5SK2H8
+feedback link: https://forms.gle/CGu4QchgBxxWnNJK8
 analytics account: Google Analytics ID
 
 <!-- ------------------------ -->

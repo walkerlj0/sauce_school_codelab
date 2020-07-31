@@ -4,7 +4,7 @@ id: Module3_SeleniumJS
 categories:Intermediate, Expert, Selenium, JavaScript, Mocha
 environments: Web
 status: Published
-feedback link: https://forms.gle/bS89x3GhobL5SK2H8
+feedback link: https://forms.gle/CGu4QchgBxxWnNJK8
 analytics account: Google Analytics ID
 
 <!-- ------------------------ -->

@@ -5,7 +5,7 @@ categories: First draft
 tags: Beginner
 status: work in progress
 authors: Lindsay Walker
-Feedback Link: mailto:helpdocs@saucelabs.com
+Feedback Link: https://forms.gle/CGu4QchgBxxWnNJK8
 
 # Module 1 — Introduction to Selenium with JavaScript
 
