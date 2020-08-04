@@ -4,10 +4,10 @@ Navigate to tools/README.md to learn more about this tool, how to use it, and ge
 This document will be for documenting sauce_school specific changes and specifications.
 <!-- -->
 
-## Access 'Codelabs' or Course files**
+## Access 'Codelabs' or Course files
 The course are located in tools/site/CourseName (e.g. tools/site/SeleniumJS). Each course will contain a markdown file for each module (which contains several lessons) which is compiled into a directory containing an index.html redered from the corresponding markdown page.
 
-## Initial setup**
+## Initial setup
 ### 1. Get the Tools
  Install Go and nodeJS on your computer, as per [instructions here](https://medium.com/@zarinlo/publish-technical-tutorials-in-google-codelab-format-b07ef76972cd)
 
@@ -73,7 +73,7 @@ When you create a new codelab markdown file from a GDoc, you can use the [Docs t
     - Get the embed URL and copy the content within src="" like the following: `<iframe src="` **https://docs.google.com/forms/d/e/1FAIpQLSfF6_0V7jEE9JYF4vWDUsHTuYYHnQbaEsMGtfeTcr8arxZgzg/viewform?embedded=true** `" width="640" height="1240" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>`
 
 ### 10. Adding Dropdowns
- 
+
 Copy and paste this link in the `<head>` of any HTML page:
 ```
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">.
